@@ -91,28 +91,41 @@ textarea {
 
 .wrapper {
   /* STEP 1: Define the grid container */
-    
+  display: grid;
   /* STEP 2a: Define the grid tracks - starting with columns */
-    
+  /*grid-template-columns: 200px 200px 200px;*/
+
   /* STEP 2b: Use fractions to define column track widths (fr) */
-    
+  /*grid-template-columns: 1fr 2fr 1fr;  fr = fraction of available space */
+  grid-template-columns: 200px repeat(3, 1fr);
   /* STEP 2c: Mix fractions with fixed widths */
     
   /* STEP 2d: Tracks using repeat() */
     
   /* STEP 3a: Implicit grids - set the height of new grid rows */
-    
+
+  /*grid-auto-rows: minmax(50px, auto);*/
+
   /* STEP 3b: Setting minimum and maximum track dimensions with minmax() - you'll need to add some extra HTML content to one of the cells to see this */
-    
+  /*grid-auto-rows: minmax(50px, auto);*/
+
+  grid-template-rows: 100px 200px 50px;
   /* STEP 6: Set the gutters using column-gap and row-gap */
-    
+    /*column-gap: 10px;
+    row-gap: 20px;8*/
+    gap: 10px 20px; /* shorthand for the above two rules */
   }
   
   /* STEP 4a: Positioning items with respect to grid lines - instruct the browser where to plot out the first box */
   
   .wrapper div:nth-child(1) {
     background: lightblue;
-    
+    /*grid-column-start: 2;
+    grid-column-end: 4;*/
+    grid-column: 2 / 4; /* shorthand for the above two rules */
+    /*grid-row-start: 2;
+    grid-row-end: 3;*/
+    grid-row: 2 / 3; /* shorthand for the above two rules */
   }
   
   /* STEP 4c: Shorthand for line-positioning with grid-column and grid-row for the first box rule above */
@@ -121,12 +134,25 @@ textarea {
   
   .wrapper div:nth-child(2) {
     background: lightsalmon;
-    
+    /*grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;*/
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
   
   /* STEP 5: Look at the browser dev tools grid inspector - the grid lines delineate the grid CELLS and grid items can span one or more cells and are called GRID AREAS */
   
-  
+  .wrapper div:nth-child(3) {
+    background: lightgreen;
+  }
+  .wrapper div:nth-child(4) {
+    background: lightcoral;
+  }
+  .wrapper div:nth-child(5) {
+    background: grey;
+  }
   
      /* GRID - The Holy Grail Layout (index.html)
      ========================================================================== */
