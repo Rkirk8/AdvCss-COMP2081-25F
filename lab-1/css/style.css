@@ -1,0 +1,69 @@
+#container {
+  display: grid;
+  gap: 5px;
+  padding: 20px;
+}
+
+/*assign all grid areas*/
+#A {
+  background-color: #ff0000;
+  grid-area: A; 
+}
+#B {
+  background-color: #00ff00;
+  grid-area: B;
+}
+#C {
+  background-color: #0000ff;
+  grid-area: C;
+}
+#D {
+  background-color: #ffff00;
+  grid-area: D;
+}
+#E {
+  background-color: #ff00ff;
+  grid-area: E;
+}
+#F {
+  background-color: #00ffff;
+  grid-area: F;
+}
+
+/* Mobile */
+#container {
+  grid-template-columns: 1fr 1fr; /* 2 column */
+  grid-row: auto;
+  grid-template-areas:
+    "A A"
+    "B B"
+    "C D"
+    "E E"
+    "F F";
+}
+/* Tablet (≥ 35em ) */
+@media only screen and (min-width: 35em) {
+  #container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-row: auto;
+    grid-template-areas:
+      "A A"
+      "B C"
+      "B D"
+      "B E"
+      "F F";
+  }
+}
+
+/* Desktop (≥ 64em ) */
+@media only screen and (min-width: 64em) {
+  #container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-row: auto;
+    grid-template-areas:
+      "A A A"
+      "B C D"
+      "B E E"
+      "F F F";
+  }
+}
