@@ -3,8 +3,9 @@
 const carouselCars = document.querySelector('#carouselExample');
 
 const carousel = new bootstrap.Carousel(carouselCars, {
-  interval: 10000,
-  wrap: true // allow cycling back to the beginning false would stop at the last slide
+  interval: 4000,
+  wrap: true,// allow cycling back to the beginning false would stop at the last slide
+  keyboard: false, // allow keyboard navigation
 });
 
 // STEP 16: Change the interval to 5 seconds (set in milliseconds)
