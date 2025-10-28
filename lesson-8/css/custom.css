@@ -1,0 +1,8 @@
+#accordion1  {
+    color: var(--bs-accordion-color)aqua;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    
+}
