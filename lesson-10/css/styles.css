@@ -45,51 +45,101 @@ h2, h3 {
 }
 /* STEP 8: Scale the element (X, Y, and combined) */
 #transforms h3:nth-of-type(4) {
+	display: inline-block;
+	outline: 2px dotted orange;
+	/* transform: scaleX(2);
+	transform: scaleY(3); */
+	transform: scale(2, 3);
+	transform-origin: 0% 50%;
 }
 /* STEP 9: Skew the element (X, Y, and combined) */
 #transforms h3:nth-of-type(5) {
+	display: inline-block;
+	outline: 2px dotted red;
+	transform-origin: right center;
+	/* transform: skewX(-30deg);
+	transform: skewY(45deg); */
+	transform: skew(14deg, 45deg);
 }
 
 /* STEP 10: Rotate the element (X, Y, and Z) */
 #transforms h3:nth-of-type(6) {
+	display: inline-block;
+	outline: 2px dotted green;
+	/* transform: rotateX(45deg);
+	transform: rotateY(45deg);
+	transform: rotateZ(45deg); */
+	transform: rotate3d(1,1,1,30deg);
 }
 
 /* STEP 11: Combining transforms */
 #transforms h3:nth-of-type(7) {
+	display: inline-block;
+	outline: 2px dotted rgb(255, 0, 149);
+	transform: scale(3) translate(30px, -50px) rotate(30deg), skew(49deg);
+	
 }
 
 /* TRANSITIONS
 -------------------------------------------------- */
 /* STEP 12: Setting up a transition */
 #transitions h3:nth-of-type(1) {
+	display: inline-block;
+	outline: 2px dotted pink;
+	background-color: red;
 	/* Transition property */
+	transition-property: background-color, transform;
 	/* Transition duration */
+	transition-duration: 1s;
 }
 #transitions h3:nth-of-type(1):hover {
+	background-color: yellow;
+	transform: scale(1.1, 1.5);
 }
 
 /* STEP 13: Delaying a transition */
 #transitions h3:nth-of-type(2) {
+	display: inline-block;
+	outline: 2px dotted yellow;
 	/* Transition property */
+	transition-property: transform;
 	/* Transition duration */
+	transition-duration: 1s;
 	/* Transition delay */
+	transition-delay: 0.5s;
 }
 #transitions h3:nth-of-type(2):hover {
+	transform: translateX(100px);
 }
 
 /* STEP 14: Controlling transition velocity */
 #transitions h3:nth-of-type(3) {
+	display: inline-block;
+	outline: 2px dotted yellow;
 	/* Transition property */
+	transition-property: transform;
 	/* Transition duration */
+	transition-duration: .75s;
 	/* Transition timing function */
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #transitions h3:nth-of-type(3):hover {
+	transform: translateX(200px);
 }
 
 /* STEP 15: Combining Transitions */
 #transitions h3:nth-of-type(4) {
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+	transition-property: background-color, width, height;
+	transition-duration: 1s, 2s, 0.5s;
+	transition-delay: 0.5s, 0.25s, 2s;
 }
 #transitions h3:nth-of-type(4):hover {
+	background-color: red;
+	width: 400px;
+	height: 500px;
 }
 
 
@@ -97,4 +147,28 @@ h2, h3 {
 -------------------------------------------------- */
 
 footer p {
+	display: inline-block;
+	background-color: blue;
+	font-weight: bold;
+	position: relative;
+	left: 0;
+	/* animation  */
+	animation-name: slidein;
+	animation-duration: 1.5s;
+	animation-iteration-count: 3;
+	animation-duration: alternate;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes slidein {
+	from {
+		left: 0;
+	}
+	25% {
+		left: 50px;
+	}
+	to{
+		left: 200px;
+	}
 }
