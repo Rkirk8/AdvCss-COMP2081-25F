@@ -18,15 +18,73 @@
         }
         p#rotate {
             background-color: orange;
+            transform: rotate(45deg);
+            transition-property: background-color;
+            transition-duration: 1s;
         }
+        p#rotate:hover {
+            background-color: red;
+        }
+
         p#scale {
             background-color: purple;
+            transform: scale(1.2, 0.8) translate(30px, 50px);
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+        p#scale:hover {
+            background-color: blue;
         }
         p#skew {
             background-color: limegreen;
+            transform: skew(20deg, 10deg) translate(30px, 50px);
+            transition-property: background-color;
+            transition-duration: 1s;
         }
+        p#skew:hover {
+            background-color: rgb(255, 251, 0);
+        }
+
         p#translate {
             background-color: hotpink;
+            transform: translate(30px, 50px);
+            transition-property: background-color;
+            transition-duration: 1s;
+        }
+        p#translate:hover {
+            background-color: darkmagenta;
+        }
+        p#firth {
+            background-color: rgb(15, 133, 133);
+            transform-origin: center top;
+            transform: scale(1) translate(30px, 50px);
+            transition-property: background-color, scale, translate, transform;
+            transition-duration: 1s;
+            /* Animation */
+            position: relative;
+            animation-name: CustomBlockAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-duration: alternate;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes CustomBlockAnimation {
+            from {
+                left: 0;
+            }
+            33% {
+                left: 200px;
+            }
+            66% {
+                left: 400px;
+            }
+            90% {
+                left: 600px;
+            }
+            to {
+                left: 0px;
+            }
         }
     </style>
 </head>
@@ -35,5 +93,6 @@
     <p id="scale">Scale me.</p>
     <p id="skew">Skew me.</p>
     <p id="translate">Translate me.</p>
+    <p id="firth">Custom block</p>
 </body>
 </html>
