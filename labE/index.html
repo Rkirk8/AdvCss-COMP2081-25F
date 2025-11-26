@@ -1,0 +1,52 @@
+<!-- lab code 570820 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab E for COMP2081 | Rielly Kirk</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <h2>% of Students Who Do XY & Z</h2>
+
+  <!-- SVG container -->
+  <svg id="chart" viewBox="0 0 300 300">
+
+    <!-- Background bar -->
+    <rect 
+      id="bar1-bg"
+      x="120" y="50" 
+      width="60" height="200" 
+      fill="#e0e0e0"
+      rx="6"
+    />
+
+    <!-- Animated bar (starts at 0) -->
+    <rect 
+      id="bar1"
+      x="120" y="250"
+      width="60" height="0"
+      transform="rotate(-180, 150, 250)"
+      fill="cornflowerblue"
+      rx="6"
+    />
+
+    <!-- Percentage text -->
+    <text 
+      id="label"
+      x="150" y="280"
+      text-anchor="middle"
+      font-size="28"
+      fill="#333"
+      font-family="Arial, sans-serif"
+    >
+      75%
+    </text>
+
+  </svg>
+
+  <script src="js/barchart.js"></script>
+</body>
+</html>

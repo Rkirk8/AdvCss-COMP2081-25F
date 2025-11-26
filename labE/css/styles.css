@@ -1,0 +1,20 @@
+/* Style the whole SVG */
+svg {
+  border: 4px dotted #777;
+  padding: 20px;
+  transition: 0.3s;
+  user-select: none;
+  font-family: "Passion One", sans-serif;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+#bar1 {
+  transition: all .5s ease-out;
+}
+
+svg:active #bar1 {
+  height: 0;
+}
