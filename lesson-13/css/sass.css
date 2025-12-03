@@ -1,0 +1,37 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* STEP 1: Declare and use variables */
+body {
+  font: 120%/1.4 Helvetica, Arial, sans-serif;
+  color: grey;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+/* STEP 2: Nesting CSS selectors */
+header h1 {
+  color: slateblue;
+}
+header p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+/* STEP 4: Mixins */
+/* STEP 5: Extend/Inheritance */
+/* STEP 5: Operators */
+main > section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* http://sass-lang.com/guide *//*# sourceMappingURL=sass.css.map */

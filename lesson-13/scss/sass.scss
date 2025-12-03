@@ -1,0 +1,79 @@
+@import 'reset';
+
+/* STEP 1: Declare and use variables */
+$font-stack: Helvetica, Arial, sans-serif;
+$primary-color: grey;
+$secondary-color: slateblue;
+$background-color: #f4f4f4;
+$white-space: 1rem;
+
+body {
+	font: 120%/1.4 $font-stack;
+	color: $primary-color;
+	background-color: $background-color;
+	padding: $white-space;
+}
+
+/* STEP 2: Nesting CSS selectors */
+header {
+	h1{
+		color: $secondary-color;
+	}
+
+	p {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+
+/* STEP 4: Mixins */
+
+header {
+	
+}
+
+main {
+	
+}
+
+footer {
+	
+}
+
+/* STEP 5: Extend/Inheritance */
+
+.message {
+	
+}
+
+.success {
+
+}
+
+.error {
+
+}
+
+.warning {
+
+}
+
+/* STEP 5: Operators */
+main > section { 
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+}
+
+main > section > article {
+
+}
+
+main > section > aside {
+
+}
+
+/* http://sass-lang.com/guide */
